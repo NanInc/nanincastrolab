@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Astrolab</title>
+	
+	<style>
+		/* resetting browser stuff */
+*     {
+  box-sizing: border-box;
+}
+html,
+body   {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+/* styling our overall page */
+body     {
+  background: #FFF;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* styling our header */
+header   {
+  background: #222;
+  color: #FFF;
+  padding: 20px 30px;
+}
+
+/* logo */
+#logo         {
+  display: inline-block;
+  color: #FFF;
+  text-decoration: none;
+  width: 49%;
+}
+#logo img    {
+  width: 50px;
+  border-radius: 3px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+#logo span   {
+  display: inline-block;
+}
+
+/* main navigation */
+nav     {
+  width: 50%;
+  display: inline-block;
+  text-align: right;
+}
+nav ul   {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a    {
+  color: #FFF;
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 3px;
+  transition: 0.3s ease all;
+}
+nav ul li a:hover   {
+  background: #444;
+}
+
+/* styling our footer */
+footer   {
+  background: #222;
+  color: #777;
+  padding: 40px;
+  text-align: center;
+}
+footer img   {
+  display: block;
+  border-radius: 5px;
+  width: 80px;
+  margin: 0 auto 10px;
+}
+
+/* styling our main content */
+.hero           {
+  min-height: 800px;
+  text-align: center;
+  background-image: url('../img/sky.jpg');
+  background-size: cover;
+}
+.hero-content   {
+  color: #FFF;
+  padding-top: 130px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.hero-content h1   {
+  font-size: 100px;
+  margin: 0;
+}
+.hero-content p    {
+  font-size: 50px;
+}
+.hero-content a    {
+  display: inline-block;
+  color: #FFF;
+  border: 3px solid #FFF;
+  border-radius: 3px;
+  padding: 15px 30px;
+  margin-right: 20px;
+  text-decoration: none;
+  font-size: 28px;
+}
+
+/* basic site sections */
+.site-section   {
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+.site-section-secondary   {
+  background: #EFEFEF;
+}
+.site-section-inside   {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.section-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.section-header h2  {
+  font-size: 30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #777;
+}
+
+/* feature boxes */
+.feature-box   {
+  display: inline-block;
+  width: 32%;
+  padding: 20px 30px;
+}
+.feature-box img  {
+  margin-bottom: 12px;
+  width: 80px;
+}
+.feature-box h5   {
+  font-size: 20px;
+  color: #999;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+/* testimonial boxes */
+.testimonial-box   {
+  display: inline-block;
+  width: 32%;
+  padding: 20px 30px;
+}
+.testimonial-content   {
+  background: #FFF;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+.testimonial-author           {
+
+}
+.testimonial-author img {
+  float: left;
+  width: 80px;
+  border-radius: 50%;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+.testimonial-author h5   {
+  font-size: 18px;
+  margin: 0;
+  padding-top:15px;
+}
+.testimonial-author span {
+  font-size: 14px;
+}
+
+/* responsive */
+/* mobile devices */
+@media screen and (max-width:768px) {
+  body   {
+    font-size: 14px;
+  }
+
+  /* header responsive */
+  #logo   {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  nav     {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  nav a   {
+    font-size: 12px;
+  }
+
+  /* hero responsive */
+  .hero       {
+    min-height: 300px;
+  }
+  .hero-content   {
+    padding-top: 80px;
+  }
+  .hero-content h1     {
+    font-size: 30px;
+  }
+  .hero-content p      {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  .hero-content a      {
+    font-size: 14px;
+    padding: 5px 12px;
+    border-width: 1px;
+    background: #FFF;
+    color: #333;
+  }
+
+  /* site section responsive */
+  .site-section-inside {
+    width: 95%;
+  }
+  .section-header h2   {
+    font-size: 22px;
+  }
+
+  /* feature box responsive */
+  .feature-box   {
+    display: block;
+    width: 100%;
+  }
+
+  /* testimonial box responsive */
+  .testimonial-box   {
+    display: block;
+    width: 100%;
+  }
+}
+
+	</style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- attach our stylesheet -->
+    <!-- <link rel="stylesheet" href="My%20Awesome%20Website_fichiers/style.css"> -->
+	
+</head>
+<body>
+
+    <!-- the header -->
+    <header>
+
+        <!-- our main logo -->
+        <a id="logo" href="https://scotch-io.github.io/html-css-website-course/index.html">
+            <img src="http://www.epita.fr/images/media/logos/logo-epita-nb.jpg?v=04122014" alt="Logo" height="42" width="42">
+            <span>NanInc Astrolab</span>
+        </a>
+
+        <!-- main navigation links -->
+        <nav>
+            <ul>
+                <li><a href="#">Acceuil</a></li>
+				<li><a href="#">News</a></li>
+				<li><a href="#">Téléchargement</a></li>
+				<li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- the content -->
+    <main>
+
+        <!-- hero content -->
+        <div class="hero">
+            <!-- content for the hero -->
+            <div class="hero-content">
+                <h1>ASTROLAB</h1>
+                <p>Espace et Aventure</p>
+
+                <a href="#">Découvrir</a>
+				<a href="#">Télécharger</a>
+            </div>
+        </div>
+
+        <!-- features section -->
+        <div class="site-section">
+        <div class="site-section-inside">
+
+            <div class="section-header">
+                <h2>Astrolab en trois points</h2>
+            </div>
+
+            <div class="feature-box">
+                <img src="https://cdn1.iconfinder.com/data/icons/flat-business-icons/128/brush-256.png" alt="Graphismes originaux">
+                <h5>Graphismes originaux</h5>
+                <p>Chaque modèle, chaque texture est ici pensé et réalisé à la main par l'équipe design d'Astrolab.</p>
+            </div>
+
+            <div class="feature-box">
+                <img src="https://cdn3.iconfinder.com/data/icons/essential-flat/100/group-256.png" alt="Multijoueur coop">
+                <h5>Multijoueur coop</h5>
+                <p>N'hésitez pas à inviter vos amis sur des niveaux inédits, jouables en équipe de deux à quatre !</p>
+            </div>
+
+            <div class="feature-box">
+                <img src="https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/bolt-256.png" alt="Gameplay dynamique">
+                <h5>Gameplay dynamique</h5>
+                <p>Associant survie, crafting, histoire et exploration, Astrolab propose une expérience de jeu où s'ennuyer n'est pas une option !</p>
+            </div>
+
+        </div>
+        </div>
+
+        <!-- testimonials section -->
+        <div class="site-section site-section-secondary">
+        <div class="site-section-inside">
+
+            <div class="section-header">
+                <h2>L'équipe</h2>
+            </div>
+
+            <div class="testimonial-box">
+                <div class="testimonial-content">
+                    Un homme de qualitey
+                </div>
+                <div class="testimonial-author">
+                    <img src="https://i.pinimg.com/originals/14/2b/0c/142b0ceb598d68cd26fbd092daeb5f98.jpg" alt="Staff">
+                    <h5>Arthur Vinbeau</h5>
+                    <span>Magician of Gameplay</span>
+                </div>
+            </div>
+
+            <div class="testimonial-box">
+                <div class="testimonial-content">
+                    Un homme de qualitey
+                </div>
+                <div class="testimonial-author">
+                    <img src="https://i.pinimg.com/originals/14/2b/0c/142b0ceb598d68cd26fbd092daeb5f98.jpg" alt="Staff">
+                    <h5>Thorium</h5>
+                    <span>Lord of Tryhard</span>
+                </div>
+            </div>
+			
+			<div class="testimonial-box">
+                <div class="testimonial-content">
+                    Un homme de qualitey
+                </div>
+                <div class="testimonial-author">
+                    <img src="https://i.pinimg.com/originals/14/2b/0c/142b0ceb598d68cd26fbd092daeb5f98.jpg" alt="Staff">
+                    <h5>Néo</h5>
+                    <span>Everything for 3D</span>
+                </div>
+            </div>
+
+            <div class="testimonial-box">
+                <div class="testimonial-content">
+                    Un homme de qualitey
+                </div>
+                <div class="testimonial-author">
+                    <img src="https://i.pinimg.com/originals/14/2b/0c/142b0ceb598d68cd26fbd092daeb5f98.jpg" alt="Staff">
+                    <h5>Warhior</h5>
+                    <span>Master of Space</span>
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+    </main>
+
+    <!-- the footer -->
+    <footer>
+        <img src="https://i.pinimg.com/originals/14/2b/0c/142b0ceb598d68cd26fbd092daeb5f98.jpg" alt="Footer Logo">
+        <span>- Noé JENN-TREYER (Néo) - Théo GOLGEVIT (Arthur Vinbeau) - Estébàn GUERIN (Thorium) - Ihor HUSAK (Warihor) -<br>Projet ASTROLAB   2017-2018 </span>
+    </footer>
+
+
+
+</body></html>
+
